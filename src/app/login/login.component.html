@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>Connexion</h2>
+<mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Nom d'utilisateur</mat-label>
+        <input matInput [(ngModel)]="username">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Mot de passe</mat-label>
+        <input matInput [(ngModel)]="password" type="password">
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="onCancel()">Annuler</button>
+    <button mat-button color="primary" (click)="onSubmit($event)">Se connecter</button>
+</mat-dialog-actions>

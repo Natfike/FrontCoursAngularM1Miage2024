@@ -1,0 +1,16 @@
+section {
+    display: table;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+mat-sidenav {
+    background-color: #b488a4;
+}
+
+mat-sidenav-container {
+    background-color: transparent;
+    height: 100vh;
+}

@@ -1,0 +1,27 @@
+.delete{
+    display: flex;
+    align-content: center;
+}
+
+.container {
+    padding: 1rem;
+    background-color: white;
+}
+
+mat-card {
+    margin-bottom: 1rem;
+}
+
+mat-card-content a {
+    text-decoration: none;
+    color: inherit;
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.spacer {
+    width: 10px;
+}

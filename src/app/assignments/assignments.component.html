@@ -1,0 +1,22 @@
+<div class="container" *ngIf="!formVisible">
+    <mat-paginator #paginator1 [length]="500" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100, 500]" aria-label="Select page" (page)="changementPage($event, paginator1, paginator2)"></mat-paginator>
+    <mat-list *ngFor="let assignment of assignments">
+        <mat-card apparance="outlined">
+            <mat-card-content><a routerLink="/assignment/{{assignment.id}}">
+                <p mat-subheder>
+                    {{assignment.dateDeRendu | date}}
+                </p>
+                <mat-list-item (click)="assignmentClique(assignment)">
+                    <p appRendu *ngIf="assignment.rendu; else nonsoumis">
+                        Devoir intitulé {{assignment.nom}} a été rendu.
+                    </p>
+                    <ng-template #nonsoumis>
+                        <p ngClass="nonRendu">Devoir intitulé {{assignment.nom}} n'a pas été rendu</p>
+                    </ng-template>
+                    <mat-divider></mat-divider>
+                </mat-list-item>
+            </a></mat-card-content>
+        </mat-card>
+    </mat-list>
+    <mat-paginator #paginator2 [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page" (page)="changementPage($event, paginator1, paginator2)"></mat-paginator>
+</div>

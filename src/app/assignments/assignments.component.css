@@ -1,0 +1,26 @@
+.rendu {
+    color: green;
+}
+
+.ajouterBtn {
+    align-self: flex-end;
+}
+
+.container {
+    padding: 1rem;
+    background-color: white;
+}
+
+mat-card {
+    margin-bottom: 1rem;
+}
+
+mat-card-content a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nonRendu {
+    color: red;
+    font-style: italic;
+}
