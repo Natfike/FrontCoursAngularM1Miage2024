@@ -1,5 +1,5 @@
 <div class="container" *ngIf="!formVisible">
-    <mat-paginator #paginator1 [length]="500" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100, 500]" aria-label="Select page" (page)="changementPage($event, paginator1, paginator2)"></mat-paginator>
+    <mat-paginator #paginator1 [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100, 500]" aria-label="Select page" (page)="changementPage($event, paginator1, paginator2)"></mat-paginator>
     <mat-list *ngFor="let assignment of assignments">
         <mat-card apparance="outlined">
             <mat-card-content><a routerLink="/assignment/{{assignment.id}}">
@@ -18,5 +18,5 @@
             </a></mat-card-content>
         </mat-card>
     </mat-list>
-    <mat-paginator #paginator2 [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page" (page)="changementPage($event, paginator1, paginator2)"></mat-paginator>
+    <mat-paginator #paginator2 [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100, 500]" aria-label="Select page" (page)="changementPage($event, paginator1, paginator2)"></mat-paginator>
 </div>
