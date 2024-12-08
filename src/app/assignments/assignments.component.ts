@@ -46,6 +46,7 @@ export class AssignmentsComponent implements OnInit {
   formVisible = false;
   assignments!: assignment[];
 
+  collectionLength!: number;
   page:number = 1;
   limit:number = 10;
   totalDocs!: number;
@@ -73,6 +74,7 @@ export class AssignmentsComponent implements OnInit {
       this.prevPage = data.prevPage;
       this.hasPrevPage = data.hasPrevPage;
       this.hasNextPage = data.hasNextPage;
+      this.collectionLength = data.length;
       console.log("Données reçues")
     });
   }
