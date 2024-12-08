@@ -14,7 +14,7 @@ export class AssignmentsService {
               private http:HttpClient,
             ) { }
 
-  url = "http://localhost:8010/api/assignments"
+  url = "https://apicoursangularm1miage2024.onrender.com/api/assignments"
 
   getAssignments(): Observable<assignment[]> {
     return this.http.get<assignment[]>(this.url)
